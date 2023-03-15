@@ -1,6 +1,6 @@
 # Fast Poisson Disk Sampling
 
-* [Paper](chrome-extension://efaidnbmnnnibpcajpcglclefindmkaj/https://www.cs.ubc.ca/~rbridson/docs/bridson-siggraph07-poissondisk.pdf)
+* [Paper](https://www.cs.ubc.ca/~rbridson/docs/bridson-siggraph07-poissondisk.pdf)
 
 This code can generate samples from a blue noise distribution in O(N) time.
 The above paper says that his algorithm can be implemented in arbitrary dimension,

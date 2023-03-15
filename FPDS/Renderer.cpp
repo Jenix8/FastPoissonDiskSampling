@@ -25,8 +25,8 @@ void processInput(GLFWwindow* window)
         glfwSetWindowShouldClose(window, true);
 }
 
-int main(void)
-{
+int main(void) 
+{ 
     glfwSetErrorCallback(error_callback);
 
     if (!glfwInit()) exit(EXIT_FAILURE);
