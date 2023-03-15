@@ -1,0 +1,45 @@
+
+void init()
+{
+	for (float i = 0.0f; i < 2.0f * PI; i += PI / 16.0f)
+	{
+		glm::vec2 r;
+		r.x = 0.6f * cos(i);
+		r.y = 0.6f * sin(i);
+		pos.push_back(r);
+	
+		r.x = 0.3f * cos(i);
+		r.y = 0.3f * sin(i);
+		pos.push_back(r);
+	}
+
+	return;
+}
+
+void run()
+{
+	for (auto& p : pos)
+		if (abs(glm::length(p) - 0.6f) < 1e-2f)
+		{
+			float tmp = p.x;
+			p.x -= p.y * dt;
+			p.y += tmp * dt;
+		}
+		else
+		{
+			float tmp = p.x;
+			p.x += p.y * dt * 5;
+			p.y -= tmp * dt * 5;
+		}
+	
+	return;
+}
+
+	//for (int i = 0; i < grid.size(); i++)
+	//	for (int j = 0; j < grid[i].size(); j++)
+	//	{
+	//		vec2 p(cellSize * i + RNDf(0, cellSize), cellSize * j + RNDf(0, cellSize));
+	//		//printf("(%.2f, %.2f)\n", p[0] - cellSize * i, p[1] - cellSize * j);
+	//		if (getCell(p) == vec2(i, j)) printf("True\n");
+	//		renderPos.push_back(fitting(p));
+	//	}
