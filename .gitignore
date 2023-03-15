@@ -5,6 +5,8 @@ x64/
 include/
 lib/
 
+*.png
+
 **/Debug/
 **/Release/
 **/x64/
